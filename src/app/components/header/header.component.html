@@ -1,9 +1,9 @@
-<div class="shadow w-100">
+<div class="shadow w-100" [ngClass]="theme == 'dark' ? 'bg-white text-dark' : 'bg-dark text-white'">
   <div class="col-12 p-0 row justify-content-center">
     <div class="col-11 my-2">
       <div class="row justify-content-between">
         <div class="col-6">
-          <button data-bs-toggle="offcanvas" data-bs-target="#menuHeader" aria-controls="menuHeader" class="btn btn-outline-dark border-0">
+          <button data-bs-toggle="offcanvas" data-bs-target="#menuHeader" aria-controls="menuHeader" class="btn border-0" [ngClass]="theme == 'dark' ? 'btn-outline-dark' : 'btn-outline-light'">
             <mat-icon>more_vert</mat-icon>
           </button>
         </div>
@@ -11,13 +11,13 @@
           <div class="row justify-content-end align-items-center p-0 h-100">
             <div class="col-12 row justify-content-end">
               <div class="col-auto p-0">
-                <button (click)="themeMode.setThemeMode('dark')" class="btn border-0" [ngClass]="theme == 'dark' ? 'btn-dark' : 'btn-outline-dark'" aria-label="Example icon-button with a menu">
+                <button (click)="themeMode.setThemeMode('dark')" class="btn border-0" [ngClass]="theme == 'dark' ? 'btn-dark' : 'btn-outline-light'" aria-label="Example icon-button with a menu">
                     <mat-icon>dark_mode
                     </mat-icon>
                 </button>
               </div>
               <div class="col-auto p-0">
-                <button (click)="themeMode.setThemeMode('light')" class="btn border-0" [ngClass]="theme == 'light' ? 'btn-dark' : 'btn-outline-dark'" aria-label="Example icon-button with a menu">
+                <button (click)="themeMode.setThemeMode('light')" class="btn border-0" [ngClass]="theme == 'light' ? 'btn-light' : 'btn-outline-dark'" aria-label="Example icon-button with a menu">
                     <mat-icon>light_mode
                     </mat-icon>
                 </button>
@@ -29,19 +29,27 @@
     </div>
   </div>
 </div>
-<div class="offcanvas offcanvas-start" tabindex="-1" id="menuHeader" aria-labelledby="menuHeaderLabel">
+<div class="offcanvas offcanvas-start" [ngClass]="theme == 'dark' ? 'bg-white text-dark' : 'bg-dark text-white'" tabindex="-1" id="menuHeader" aria-labelledby="menuHeaderLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="menuHeaderLabel">Menu</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="col-12 row justify-content-around align-items-center">
+      <div class="col-9">
+        <h5 class="offcanvas-title" id="menuHeaderLabel">Menu</h5>
+      </div>
+      <div class="col-3 p-0">
+        <button type="button" class="btn border-0 float-end" data-bs-dismiss="offcanvas" aria-label="Close" [ngClass]="theme == 'light' ? 'text-white' : 'text-dark'">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </div>
   </div>
   <div class="offcanvas-body">
-    <button class="w-100 my-1 btn btn-dark">
+    <button class="w-100 my-1 btn d-flex justify-content-center align-items-center" [ngClass]="theme == 'light' ? 'btn-light' : 'btn-dark'">
       <mat-icon>home</mat-icon>
-      <span>  Inicio</span>
+      <span class="ml-2">Inicio</span>
     </button>
-    <button class="w-100 my-1 btn btn-dark">
+    <button class="w-100 my-1 btn d-flex justify-content-center align-items-center" [ngClass]="theme == 'light' ? 'btn-light' : 'btn-dark'">
       <mat-icon>groups_2</mat-icon>
-      <span>  Catalogo</span>
+      <span class="ml-2">Catalogo</span>
     </button>
   </div>
 </div>
