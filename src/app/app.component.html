@@ -1,2 +1,21 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<style>
+  .bg-music {
+    background-image: url('./assets/background_inicio.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<div class="vh-100 w-100 overflow-x-hidden" [ngClass]="theme == 'light' ? 'bg-white' : 'bg-dark'">
+  <div style="height:12%;">
+    <app-header></app-header>
+  </div>
+  <div style="min-height:76%;" class="overflow-y-auto overflow-x-hidden bg-music p-0 m-0">
+    <router-outlet></router-outlet>
+  </div>
+  <div style="height:12%;">
+    <app-footer></app-footer>
+  </div>
+</div>
+
