@@ -1,12 +1,12 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { ThemeModeService } from '../../../utils/services/theme-mode.service';
 import { CatalogoComponent } from '../../../components/catalogo/catalogo.component';
+import { ThemeModeService } from '../../../utils/services/theme-mode.service';
 
 @Component({
   selector: 'app-index',
