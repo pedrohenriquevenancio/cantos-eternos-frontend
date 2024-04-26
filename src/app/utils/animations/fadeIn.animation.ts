@@ -5,8 +5,4 @@ export const fadeInAnimation = trigger('fadeInAnimation', [
     style({ opacity: 0 }),
     animate('700ms', style({ opacity: 1 }))
   ]),
-  transition(':leave', [
-    style({ opacity: 1 }),
-    animate('700ms', style({ opacity: 0 }))
-  ])
 ]);
