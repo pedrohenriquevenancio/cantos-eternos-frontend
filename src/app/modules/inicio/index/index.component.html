@@ -1,19 +1,28 @@
-<div class="w-100 h-100 p-0 m-0">
-  <div class="row justify-content-center rounded-bottom rounded-bottom-circle pt-4 pb-4" [ngClass]="theme == 'light' ? 'bg-white' : 'bg-dark'">
-    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
-      <div class="row justify-content-center">
-        <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12">
-          <img *ngIf="theme == 'light'" src="./assets/logos/light_logo.png" alt="Logo" class="img-fluid rounded-circle" loading="eager">
-          <img *ngIf="theme == 'dark'" src="./assets/logos/dark_logo.png" alt="Logo" class="img-fluid rounded-circle" loading="eager">
+<style>
+  .bg-music {
+    background-image: url('./assets/background_inicio.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<div class="w-100 h-100 bg-music">
+  <div class="d-flex flex-column justify-content-center align-items-center h-100">
+    <div class="row justify-content-center w-100 mb-3">
+      <div class="col-xl-5 col-lg-5 col-md-6 col-sm-7">
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <div class="row justify-content-center">
+                <img [@fadeInAnimation] *ngIf="theme == 'light'" src="./assets/logos/light_logo.png" alt="Logo" class="img-fluid rounded-circle" loading="eager">
+                <img [@fadeInAnimation] *ngIf="theme == 'dark'" src="./assets/logos/dark_logo.png" alt="Logo" class="img-fluid rounded-circle" loading="eager">
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row justify-content-center col-12">
-      <div class="col-5">
-        <div class="row justify-content-center mt-3">
-          <button style="font-size: smaller;" class="btn btn-sm w-auto" [ngClass]="theme == 'dark' ? 'btn-light' : 'btn-dark'">Explorar</button>
-        </div>
-      </div>
+    <div class="row justify-content-center w-100">
+      <button [@fadeInAnimation] class="btn shadow-lg p-2 w-auto" [ngClass]="theme == 'dark' ? 'btn-light' : 'btn-dark'">Explorar</button>
     </div>
   </div>
 </div>

@@ -1,7 +1,8 @@
 import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { ThemeModeService } from '../../../utils/services/theme-mode.service';
 import { FooterComponent } from '../../../components/footer/footer.component';
+import { fadeInAnimation } from '../../../utils/animations/fadeIn.animation';
+import { ThemeModeService } from '../../../utils/services/theme-mode.service';
 
 @Component({
   selector: 'app-index',
@@ -9,10 +10,11 @@ import { FooterComponent } from '../../../components/footer/footer.component';
   imports: [
     NgClass,
     NgIf,
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './index.component.html',
-  styleUrl: './index.component.sass'
+  styleUrl: './index.component.sass',
+  animations: [fadeInAnimation]
 })
 export class IndexComponent {
   public theme : string = '';

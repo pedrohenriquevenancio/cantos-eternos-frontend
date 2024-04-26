@@ -1,9 +1,9 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { NgClass } from '@angular/common';
 import { ThemeModeService } from '../../utils/services/theme-mode.service';
 
 @Component({
@@ -17,7 +17,7 @@ import { ThemeModeService } from '../../utils/services/theme-mode.service';
     NgClass
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.sass'
+  styleUrl: './header.component.sass',
 })
 export class HeaderComponent {
   public theme : string = 'dark';
