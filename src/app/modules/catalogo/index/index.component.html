@@ -1,1 +1,123 @@
-<p>index works!</p>
+<style>
+  .selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+  }
+  .max-h-80 {
+    max-height: 80%;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #2d2d2da2;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #4e4e4e;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f11d;
+  }
+</style>
+<div class="w-100 h-100 overflow-hidden pt-2 pb-5">
+  <div class="row justify-content-center align-items-baseline my-5 h-100 p-3">
+    <div class="col-11 py-2 h-100">
+      <nav class="row mb-4">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10">
+          <mat-form-field class="w-100 rounded-pill mb-0">
+            <mat-label><b><mat-icon>search</mat-icon></b> Pesquisar</mat-label>
+            <input matInput type="text" [(ngModel)]="value" (change)="searchArtistas()">
+            @if (value && value.length > 0) {
+              <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                <mat-icon>close</mat-icon>
+              </button>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-2">
+          <div class="row justify-content-center">
+            <div class="col-11">
+              <div class="row justify-content-end align-items-center h-100 mt-2">
+                <button data-bs-toggle="offcanvas" data-bs-target="#filtros" aria-controls="filtros" mat-mini-fab color="basic" class="mr-2" aria-label="Botão de filtragem">
+                  <mat-icon>filter_list</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="max-h-80 overflow-y-auto overflow-x-hidden pb-5 mb-5">
+        <app-catalogo></app-catalogo>
+      </main>
+    </div>
+  </div>
+</div>
+<div class="offcanvas offcanvas-end" [ngClass]="theme == 'light' ? 'bg-white text-dark' : 'bg-dark text-white'" tabindex="-1" id="filtros" aria-labelledby="filtrosLabel">
+  <div class="offcanvas-header">
+    <div class="col-12 row justify-content-around align-items-center">
+      <div class="col-9">
+        <h3 class="m-0 p-0">Filtros</h3>
+      </div>
+      <div class="col-3 p-0">
+        <button type="button" class="btn border-0 float-end" data-bs-dismiss="offcanvas" aria-label="Close" [ngClass]="theme == 'dark' ? 'text-white' : 'text-dark'">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-body">
+    <!-- <form>
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <div class="row">
+            <div class="col-12 mb-2">
+              <label>Gêneros musicais</label>
+            </div>
+            <div class="col-12">
+              <div class="row justify-content-between">
+                <div class="col-auto px-1 m-1" *ngFor="let gender of music_genders">
+                  <button style="font-size: smaller;" (click)="setGenders(gender)" class="btn btn-sm d-flex justify-content-center align-items-center" [ngClass]="theme == 'dark' ? 'btn-light' : 'btn-dark'">
+                    <mat-icon style="font-size: 0.9rem;" class="pt-1 m-0 p-0" *ngIf="selected_music_genders.includes(gender)">check_box</mat-icon>
+                    {{gender}}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3 border-top border-top-2 pt-2">
+            <div class="col-12 mb-2">
+              <label>Gênero</label>
+            </div>
+            <div class="col-12">
+              <div class="row justify-content-around">
+                <div class="col-auto px-1 m-1">
+                  <button style="font-size: smaller;" class="btn btn-sm d-flex justify-content-center align-items-center" [ngClass]="theme == 'dark' ? 'btn-light' : 'btn-dark'">
+                    <mat-icon style="font-size: 0.9rem;" class="pt-1 m-0 p-0" *ngIf="selected_music_genders.includes(gender)">check_box</mat-icon>
+                    Todos
+                  </button>
+                </div>
+                <div class="col-auto px-1 m-1">
+                  <button style="font-size: smaller;" class="btn btn-sm d-flex justify-content-center align-items-center" [ngClass]="theme == 'dark' ? 'btn-light' : 'btn-dark'">
+                    <mat-icon style="font-size: 0.9rem;" class="pt-1 m-0 p-0" *ngIf="selected_music_genders.includes(gender)">check_box</mat-icon>
+                    Cantores
+                  </button>
+                </div>
+                <div class="col-auto px-1 m-1">
+                <button style="font-size: smaller;" class="btn btn-sm d-flex justify-content-center align-items-center" [ngClass]="theme == 'dark' ? 'btn-light' : 'btn-dark'">
+                  <mat-icon style="font-size: 0.9rem;" class="pt-1 m-0 p-0" *ngIf="selected_music_genders.includes(gender)">check_box</mat-icon>
+                  Cantoras
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form> -->
+  </div>
+</div>
+

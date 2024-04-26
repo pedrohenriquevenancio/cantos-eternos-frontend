@@ -1,3 +1,22 @@
+<style>
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #2d2d2d;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+</style>
+
 <div class="vh-100 w-100 overflow-x-hidden" [ngClass]="theme == 'light' ? 'bg-white' : 'bg-dark'">
   <div style="min-height:auto;" class="position-fixed z-2 w-100">
     <app-header></app-header>

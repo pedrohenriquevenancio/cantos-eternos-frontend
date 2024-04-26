@@ -1,0 +1,5 @@
+<div class="row justify-content-around py-3">
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6" *ngFor="let artista of artistas;">
+    <img [@imgCardEffect] [src]="artista.src" [alt]="artista.nome" class="img-fluid">
+  </div>
+</div>
