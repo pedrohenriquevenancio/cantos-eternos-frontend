@@ -42,7 +42,12 @@
 <div class="offcanvas offcanvas-start" [ngClass]="theme == 'light' ? 'bg-white text-dark' : 'bg-dark text-white'" tabindex="-1" id="menuHeader" aria-labelledby="menuHeaderLabel">
   <div class="offcanvas-header">
     <div class="col-12 row justify-content-around align-items-center">
-      <div class="col-9"></div>
+      <div class="col-9">
+        <div class="col-5">
+          <img [@fadeInAnimation] *ngIf="theme == 'light'" src="./assets/logos/light_logo.png" alt="Logo" class="img-fluid w-100 rounded-circle" loading="eager">
+        <img [@fadeInAnimation] *ngIf="theme == 'dark'" src="./assets/logos/dark_logo.png" alt="Logo" class="img-fluid w-100 rounded-circle" loading="eager">
+        </div>
+      </div>
       <div class="col-3 p-0">
         <button type="button" class="btn border-0 float-end" data-bs-dismiss="offcanvas" aria-label="Close" [ngClass]="theme == 'dark' ? 'text-white' : 'text-dark'">
           <mat-icon>close</mat-icon>
@@ -51,13 +56,13 @@
     </div>
   </div>
   <div class="offcanvas-body">
-    <button (click)="navigateTo('/inicio')" class="w-100 btn rounded-0 d-flex justify-content-center align-items-center" [ngClass]="theme == 'light' ? 'btn-outline-dark' : 'btn-outline-light'">
+    <button (click)="navigateTo('/inicio')" class="w-100 btn rounded-0 d-flex justify-content-start align-items-center border-0 py-2" [ngClass]="theme == 'light' ? 'btn-outline-dark' : 'btn-outline-light'">
       <mat-icon>home</mat-icon>
-      <span class="ml-2">Inicio</span>
+      <h4 class="ml-4 mb-0">  Inicio</h4>
     </button>
-    <button (click)="navigateTo('/catalogo')" class="w-100 btn rounded-0 d-flex justify-content-center align-items-center" [ngClass]="theme == 'light' ? 'btn-outline-dark' : 'btn-outline-light'">
+    <button (click)="navigateTo('/catalogo')" class="w-100 btn rounded-0 d-flex justify-content-start align-items-center border-0 py-2" [ngClass]="theme == 'light' ? 'btn-outline-dark' : 'btn-outline-light'">
       <mat-icon>groups_2</mat-icon>
-      <span class="ml-2">Catalogo</span>
+      <h4 class="ml-4 mb-0">  Catalogo</h4>
     </button>
   </div>
 </div>
