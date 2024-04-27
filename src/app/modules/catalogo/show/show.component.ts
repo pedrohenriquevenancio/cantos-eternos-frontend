@@ -1,10 +1,10 @@
+import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
+import { fadeInAnimation } from '../../../utils/animations/fadeIn.animation';
 import { ArtistasAPIService } from '../../../utils/api/artistas-api.service';
 import { ThemeModeService } from '../../../utils/services/theme-mode.service';
-import { NgClass, NgStyle } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
-import { fadeInAnimation } from '../../../utils/animations/fadeIn.animation';
 
 @Component({
   selector: 'app-show',
@@ -12,6 +12,8 @@ import { fadeInAnimation } from '../../../utils/animations/fadeIn.animation';
   imports: [
     NgClass,
     NgStyle,
+    NgIf,
+    NgFor,
     MatIconModule
   ],
   templateUrl: './show.component.html',
