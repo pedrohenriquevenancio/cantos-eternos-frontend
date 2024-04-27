@@ -15,7 +15,7 @@
     <div class="row justify-content-center p-0">
       <div class="col-11 p-0">
         <div class="row">
-          <button (click)="navigateBack()" class="d-flex align-items-center mx-3 mb-2 p-0 w-auto px-3 py-1 btn btn-sm" [ngClass]="theme == 'light' ? 'btn-light' : 'btn-dark'"><mat-icon style="font-size: 1.3rem;">arrow_back_ios</mat-icon> Voltar</button>
+          <button (click)="navigateBack()" class="d-flex align-items-center mx-3 mb-2 p-0 w-auto px-3 py-1 btn btn-sm" [ngStyle]="{'background-color':artista.color ?? 'transparent'}" [ngClass]="theme == 'light' ? 'btn-outline-light' : 'btn-outline-dark'"><mat-icon style="font-size: 1.3rem;">arrow_back_ios</mat-icon> Voltar</button>
         </div>
       </div>
     </div>
