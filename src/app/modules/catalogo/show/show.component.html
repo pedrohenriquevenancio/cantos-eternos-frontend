@@ -1,1 +1,69 @@
-<p>show works!</p>
+<style>
+  img {
+    aspect-ratio: 16/9;
+  }
+  .img-zoom {
+    transform: scale(1.25);
+  }
+  .text-bold {
+    font-weight: bold;
+  }
+</style>
+
+<div class="h-100 overflow-x-hidden overflow-y-auto">
+  <div class="w-100 h-auto overflow-hidden mt-5 pt-4" [ngStyle]="{'background-color':artista.color ?? 'transparent'}" [ngClass]="theme == 'light' ? 'text-dark' : 'text-white'">
+    <div class="row justify-content-center p-0">
+      <div class="col-11 p-0">
+        <div class="row">
+          <button (click)="navigateBack()" class="d-flex align-items-center mx-3 mb-2 p-0 w-auto px-3 py-1 btn btn-sm" [ngClass]="theme == 'light' ? 'btn-light' : 'btn-dark'"><mat-icon style="font-size: 1.3rem;">arrow_back_ios</mat-icon> Voltar</button>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-xl-5 col-lg-5 col-md-6 col-sm-7">
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <img [@fadeInAnimation] [src]="artista.src" alt="Artista selecionado" class="img-fluid img-zoom">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-100 h-auto pb-5 mb-5">
+    <div class="row mt-4">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10">
+            <div class="row justify-content-around">
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="row justify-content-center">
+                  <button [@fadeInAnimation]  class="btn w-auto px-3 py-2 my-2" [ngClass]="theme == 'dark' ? 'btn-light' : 'btn-dark'">
+                    Trajetória
+                  </button>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="row justify-content-center">
+                  <button [@fadeInAnimation]  class="btn w-auto px-3 py-2 my-2" [ngClass]="theme == 'dark' ? 'btn-light' : 'btn-dark'">
+                    Grandes sucessos
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <div class="row justify-content-xl-end justify-content-lg-end justify-content-md-center justify-content-sm-center mt-2">
+              <button [@fadeInAnimation]  class="btn px-5 py-2 text-bold" [ngStyle]="{'background-color':artista.color ?? 'transparent'}">
+                Escutar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
