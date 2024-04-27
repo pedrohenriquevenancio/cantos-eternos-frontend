@@ -20,6 +20,11 @@ export class ArtistasAPIService {
         './assets/4.png',
         './assets/6.png',
       ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
+      ],
       color: '#38B6FF'
     },
     {
@@ -35,6 +40,11 @@ export class ArtistasAPIService {
         './assets/1.png',
         './assets/4.png',
         './assets/6.png',
+      ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
       ],
       color: '#FF5757'
     },
@@ -52,6 +62,11 @@ export class ArtistasAPIService {
         './assets/4.png',
         './assets/6.png',
       ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
+      ],
       color: '#FFB000'
     },
     {
@@ -67,6 +82,11 @@ export class ArtistasAPIService {
         './assets/1.png',
         './assets/4.png',
         './assets/6.png',
+      ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
       ],
       color: '#38B6FF'
     },
@@ -84,6 +104,11 @@ export class ArtistasAPIService {
         './assets/4.png',
         './assets/6.png',
       ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
+      ],
       color: '#FF5757'
     },
     {
@@ -99,6 +124,11 @@ export class ArtistasAPIService {
         './assets/1.png',
         './assets/4.png',
         './assets/6.png',
+      ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
       ],
       color: '#FFB000'
     },
@@ -116,6 +146,11 @@ export class ArtistasAPIService {
         './assets/4.png',
         './assets/6.png',
       ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
+      ],
       color: '#38B6FF'
     },
     {
@@ -131,6 +166,11 @@ export class ArtistasAPIService {
         './assets/1.png',
         './assets/4.png',
         './assets/6.png',
+      ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
       ],
       color: '#FF5757'
     },
@@ -148,6 +188,11 @@ export class ArtistasAPIService {
         './assets/4.png',
         './assets/6.png',
       ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
+      ],
       color: '#FFB000'
     },
     {
@@ -163,6 +208,11 @@ export class ArtistasAPIService {
         './assets/1.png',
         './assets/4.png',
         './assets/6.png',
+      ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
       ],
       color: '#38B6FF'
     },
@@ -180,6 +230,11 @@ export class ArtistasAPIService {
         './assets/4.png',
         './assets/6.png',
       ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
+      ],
       color: '#FF5757'
     },
     {
@@ -195,6 +250,11 @@ export class ArtistasAPIService {
         './assets/1.png',
         './assets/4.png',
         './assets/6.png',
+      ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
       ],
       color: '#FFB000'
     },
@@ -212,6 +272,11 @@ export class ArtistasAPIService {
         './assets/4.png',
         './assets/6.png',
       ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
+      ],
       color: '#38B6FF'
     },
     {
@@ -227,6 +292,11 @@ export class ArtistasAPIService {
         './assets/1.png',
         './assets/4.png',
         './assets/6.png',
+      ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
       ],
       color: '#FF5757'
     },
@@ -244,6 +314,11 @@ export class ArtistasAPIService {
         './assets/4.png',
         './assets/6.png',
       ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
+      ],
       color: '#FFB000'
     },
     {
@@ -259,6 +334,11 @@ export class ArtistasAPIService {
         './assets/1.png',
         './assets/4.png',
         './assets/6.png',
+      ],
+      links: [
+        {type: 'youtube', url:''},
+        {type: 'spotify', url:''},
+        {type: 'instagram', url:''}
       ],
       color: '#38B6FF'
     },
