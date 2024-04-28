@@ -39,6 +39,8 @@ export class ShowComponent {
       this.id = params['id'];
     });
     this.artista = this.api.getArtistaById(this.id);
+
+    this.scrollTo('top');
   }
 
   navigateBack() {
