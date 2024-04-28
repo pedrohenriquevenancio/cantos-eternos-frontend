@@ -1,27 +1,27 @@
-# CantosEternosFrontend
+# Cantos Eternos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+Bem-vindo ao Cantos Eternos!
 
-## Development server
+O Cantos Eternos é uma plataforma dedicada a homenagear e preservar a memória dos cantores que já partiram, imortalizando suas vozes e legados para as gerações presentes e futuras. Este projeto, desenvolvido com tecnologias de ponta como Angular, Bootstrap, Angular Materials, MongoDB e Express, busca oferecer aos usuários uma experiência única ao explorar as trajetórias e os grandes sucessos de artistas icônicos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este repositório contêm apenas os items necessários para o Front-End, pois, é utilizado a metodologia de Micro Serviços para implementar o Back-End.
+Veja o repositório com o conteúdo do Back-End, através desse link:
+--Link indisponível--
 
-## Code scaffolding
+## Sobre o Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O Cantos Eternos é mais do que apenas um site, é um tributo aos talentos que deixaram uma marca indelével na história da música. Aqui, os visitantes encontrarão uma coleção cuidadosamente curada de perfis de cantores falecidos, cada um acompanhado por uma narrativa detalhada de suas carreiras, informações biográficas e uma seleção de suas músicas mais emblemáticas.
 
-## Build
+### Acesse o site: https://cantoseternos.vercel.app
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tecnologias Utilizadas
 
-## Running unit tests
+O Cantos Eternos é desenvolvido com uma combinação de tecnologias modernas e robustas, garantindo uma experiência de usuário fluida e cativante:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Angular**: Uma estrutura de desenvolvimento de aplicativos da web amplamente utilizada para criar interfaces de usuário dinâmicas e responsivas.
+- **Bootstrap**: Um dos frameworks front-end mais populares para design responsivo e desenvolvimento ágil.
+- **Angular Materials**: Uma biblioteca de componentes prontos para uso que segue os princípios do Material Design, oferecendo uma estética moderna e consistente.
+- **MongoDB**: Um banco de dados NoSQL altamente escalável e flexível, ideal para armazenar e recuperar dados de forma eficiente.
+- **Express**: Um framework robusto para aplicativos da web Node.js, utilizado para construir APIs RESTful e facilitar o desenvolvimento do backend.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+*Cantos Eternos - Preserve a Memória, Celebre a Música.*
