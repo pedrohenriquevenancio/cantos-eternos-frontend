@@ -44,8 +44,8 @@
     <div class="col-12 row justify-content-around align-items-center">
       <div class="col-9">
         <div class="col-5">
-          <img [@fadeInAnimation] *ngIf="theme == 'light'" src="./assets/logos/light_logo.png" alt="Logo" class="img-fluid w-100 rounded-circle" loading="eager">
-        <img [@fadeInAnimation] *ngIf="theme == 'dark'" src="./assets/logos/dark_logo.png" alt="Logo" class="img-fluid w-100 rounded-circle" loading="eager">
+          <img *ngIf="theme == 'light'" src="./assets/logos/light_logo.png" alt="Logo" class="img-fluid w-100 rounded-circle" loading="eager">
+          <img *ngIf="theme == 'dark'" src="./assets/logos/dark_logo.png" alt="Logo" class="img-fluid w-100 rounded-circle" loading="eager">
         </div>
       </div>
       <div class="col-3 p-0">
@@ -57,12 +57,28 @@
   </div>
   <div class="offcanvas-body">
     <button (click)="navigateTo('/inicio')" class="w-100 btn rounded-0 d-flex justify-content-start align-items-center border-0 py-2" [ngClass]="theme == 'light' ? 'btn-outline-dark' : 'btn-outline-light'">
-      <mat-icon>home</mat-icon>
-      <h4 class="ml-4 mb-0">  Inicio</h4>
+      <div class="col-2">
+        <mat-icon>home</mat-icon>
+      </div>
+      <div class="col-10">
+        <h4 class="mb-0 text-start">  Inicio</h4>
+      </div>
+    </button>
+    <button (click)="navigateTo('/sobre-nos')" class="w-100 btn rounded-0 d-flex justify-content-start align-items-center border-0 py-2" [ngClass]="theme == 'light' ? 'btn-outline-dark' : 'btn-outline-light'">
+      <div class="col-2">
+        <mat-icon>info</mat-icon>
+      </div>
+      <div class="col-10">
+        <h4 class="mb-0 text-start">  Sobre nós</h4>
+      </div>
     </button>
     <button (click)="navigateTo('/catalogo')" class="w-100 btn rounded-0 d-flex justify-content-start align-items-center border-0 py-2" [ngClass]="theme == 'light' ? 'btn-outline-dark' : 'btn-outline-light'">
-      <mat-icon>groups_2</mat-icon>
-      <h4 class="ml-4 mb-0">  Catalogo</h4>
+      <div class="col-2">
+        <mat-icon>groups_2</mat-icon>
+      </div>
+      <div class="col-10">
+        <h4 class="mb-0 text-start">  Catalogo</h4>
+      </div>
     </button>
   </div>
 </div>
