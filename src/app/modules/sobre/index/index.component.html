@@ -1,1 +1,44 @@
-<p>index works!</p>
+<style>
+  .bg-music {
+    background-image: url('./assets/background_inicio.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.559));
+  }
+</style>
+
+<div class="w-100 h-100 overflow-hidden py-3" [ngClass]="theme == 'light' ? 'bg-white text-black' : 'bg-black text-white'">
+  <div class="row justify-content-center align-items-baseline my-5 h-100 p-3">
+    <div class="col-11 py-2 h-100 overflow-y-auto overflow-x-hidden">
+      <main class="max-h-80 pb-5 px-3 mb-5">
+        <div class="w-auto rounded-pill" [ngClass]="theme == 'dark' ? 'bg-white text-black' : 'bg-black text-white'">
+          <h2 class="m-0 px-3 py-1">Sobre nós</h2>
+        </div>
+        <h4 class="text-center text-wrap rounded">
+          <br>
+          Bem-vindo ao <b>Cantos Eternos</b>, um lugar onde as vozes imortais encontram seu lar.
+          <br><br>
+          Em um mundo onde as memórias podem desvanecer e as melodias se dissipam no tempo, o Cantos Eternos surge como uma oásis de reverência e celebração. Aqui, mergulhamos nas profundezas da história da música, honrando os grandes cantores que, embora tenham partido, continuam a ecoar em nossos corações e mentes.
+          <br><br>
+          Somos apaixonados por preservar o legado dos talentosos artistas que moldaram a paisagem musical, transformando suas vidas e obras em testemunhos eternos da beleza e da emoção humana. De Chico Buarte a Rita Lee, de Michael Jackson a Whitney Houston, cada voz imortalizada aqui conta uma história única de paixão, talento e inspiração.
+          <br><br>
+          Nossa missão é mais do que apenas relembrar o passado; é também inspirar as gerações futuras, proporcionando um espaço onde o conhecimento, a admiração e a conexão fluem livremente. Com uma combinação cuidadosa de biografias detalhadas, vídeos emocionantes e uma seleção de grandes sucessos, convidamos você a se perder na música e na memória.
+          <br>
+          <br>
+          <b>
+          Junte-se a nós nesta jornada de descoberta e homenagem. Explore, aprenda e deixe-se envolver pela magia intemporal dos Cantos Eternos.
+          </b>
+          <br><br>
+          <b>Cantos Eternos - Preserve a Memória, Celebre a Música.</b>
+        </h4>
+        <div class="row justify-content-center">
+          <div class="col-3">
+            <img [@fadeInAnimation] *ngIf="theme == 'dark'" src="./assets/logos/light_logo.png" alt="Logo" class="img-fluid rounded-circle" loading="eager">
+            <img [@fadeInAnimation] *ngIf="theme == 'light'" src="./assets/logos/dark_logo.png" alt="Logo" class="img-fluid rounded-circle" loading="eager">
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
