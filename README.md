@@ -7,7 +7,7 @@ Welcome to Cantos Eternos!
 Cantos Eternos is a platform dedicated to honoring and preserving the memory of deceased singers, immortalizing their voices and legacies for present and future generations. This project, developed with cutting-edge technologies such as Angular, Bootstrap, Angular Materials, MongoDB, and Express, aims to offer users a unique experience by exploring the trajectories and greatest hits of iconic artists.
 
 This repository contains only the items necessary for the Front-End, as Microservices methodology is utilized to implement the Back-End. Please see the repository with the Back-End content through this link:
---Link unavailable--
+[--Link to the repository--](https://github.com/pedrohvenancio/cantos-eternos-api)
 
 ## About the Project
 
@@ -24,6 +24,7 @@ Cantos Eternos is developed with a combination of modern and robust technologies
 - **Angular Materials**: A library of ready-to-use components that follows the principles of Material Design, offering a modern and consistent aesthetic.
 - **MongoDB**: A highly scalable and flexible NoSQL database, ideal for storing and retrieving data efficiently.
 - **Express**: A robust framework for Node.js web applications, used to build RESTful APIs and facilitate backend development.
+- **Node JS**: A platform for executing JavaScript on the server, ideal for developing scalable and high-performance web applications.
 
 *Cantos Eternos - Preserve the Memory, Celebrate the Music.*
 
@@ -37,7 +38,7 @@ O Cantos Eternos é uma plataforma dedicada a homenagear e preservar a memória 
 
 Este repositório contêm apenas os items necessários para o Front-End, pois, é utilizado a metodologia de Micro Serviços para implementar o Back-End.
 Veja o repositório com o conteúdo do Back-End, através desse link:
---Link indisponível--
+[--Link para o repositório--](https://github.com/pedrohvenancio/cantos-eternos-api)
 
 ## Sobre o Projeto
 
@@ -54,6 +55,7 @@ O Cantos Eternos é desenvolvido com uma combinação de tecnologias modernas e 
 - **Angular Materials**: Uma biblioteca de componentes prontos para uso que segue os princípios do Material Design, oferecendo uma estética moderna e consistente.
 - **MongoDB**: Um banco de dados NoSQL altamente escalável e flexível, ideal para armazenar e recuperar dados de forma eficiente.
 - **Express**: Um framework robusto para aplicativos da web Node.js, utilizado para construir APIs RESTful e facilitar o desenvolvimento do backend.
+- **Node JS**: Uma plataforma de execução de JavaScript no servidor, ideal para desenvolvimento de aplicações web escaláveis e de alto desempenho.
 
 *Cantos Eternos - Preserve a Memória, Celebre a Música.*
 
