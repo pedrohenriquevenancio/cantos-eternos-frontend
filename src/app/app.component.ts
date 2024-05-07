@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ThemeModeService } from './utils/services/theme-mode.service';
 import { NgClass } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
+import { ArtistasAPIService } from './utils/api/artistas-api.service';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 export class AppComponent {
   public theme : string = '';
 
-  constructor(private themeMode : ThemeModeService) {
+  constructor(private themeMode : ThemeModeService, private api : ArtistasAPIService) {
     this.themeMode.getThemeMode().subscribe((theme) => {
       this.theme = theme;
     });

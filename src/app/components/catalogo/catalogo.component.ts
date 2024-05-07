@@ -1,7 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { imgCardEffect } from '../../utils/animations/imgCardEffect.animation';
 import { Router } from '@angular/router';
+import { imgCardEffect } from '../../utils/animations/imgCardEffect.animation';
 import { ArtistasAPIService } from '../../utils/api/artistas-api.service';
 
 @Component({
@@ -20,11 +20,15 @@ import { ArtistasAPIService } from '../../utils/api/artistas-api.service';
 })
 export class CatalogoComponent {
   public artistas : any[] = [];
+  public imagesLoaded : number[] = [];
 
   constructor(private router : Router, private api : ArtistasAPIService) {
-    this.artistas = this.api.getArtistas();
+    this.api.getArtistas().then((artistas) => {
+      this.artistas = artistas;
+    }).catch((err) => {
+      console.log(err);
+    });
   }
-
 
   show(id:string|number) {
     this.router.navigate(['catalogo/visualizar/', id]);

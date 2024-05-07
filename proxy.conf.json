@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://cantos-eternos-api.vercel.app",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

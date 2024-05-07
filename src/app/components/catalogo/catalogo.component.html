@@ -1,5 +1,5 @@
-<div class="row justify-content-around py-3">
-  <button (click)="show(artista.id)" class="col-xl-3 col-lg-3 col-md-4 col-sm-6 btn border-0 bg-transparent" *ngFor="let artista of artistas;">
-    <img [@imgCardEffect] [src]="artista.src" [alt]="artista.nome" class="img-fluid" loading="eager">
+  <div class="row justify-content-around py-3">
+  <button (click)="show(artista._id)" class="col-xl-3 col-lg-3 col-md-4 col-sm-6 btn border-0 bg-transparent text-white" *ngFor="let artista of artistas; let i = index">
+    <img [@imgCardEffect] [src]="imagesLoaded.includes(i) ? artista.srcBtn.replace('artista_', 'buttons/').replace('png', 'svg') : '/assets/no_image_button.svg'" [alt]="artista.nome" class="img-fluid button-img" loading="eager" (load)="imagesLoaded.push(i)">
   </button>
 </div>

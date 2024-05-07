@@ -38,7 +38,13 @@ export class ShowComponent {
     this.currentRoute.params.subscribe(params => {
       this.id = params['id'];
     });
-    this.artista = this.api.getArtistaById(this.id);
+
+    this.api.getArtistaById(this.id)
+    .then((artista) => {
+      this.artista = artista
+      console.log(this.artista);
+    })
+    .catch((err) => console.log(err));
 
     this.scrollTo('top');
   }
