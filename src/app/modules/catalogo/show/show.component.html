@@ -81,7 +81,7 @@
         <div class="row justify-content-center align-items-center h-100">
           <div class="col-8">
             <div class="row justify-content-xl-end justify-content-lg-end justify-content-md-center justify-content-sm-center mt-2">
-              <button [@fadeInAnimation] (click)="scrollTo('redes_sociais')"  class="btn d-flex align-items-center justify-content-center px-5 py-2 text-bold" [ngStyle]="{'background-color':artista.color ?? 'transparent'}">
+              <button [@fadeInAnimation] (click)="scrollTo('redes_sociais')" *ngIf="artista.links.length > 0" class="btn d-flex align-items-center justify-content-center px-5 py-2 text-bold" [ngStyle]="{'background-color':artista.color ?? 'transparent'}">
                 <mat-icon>headphones</mat-icon> Escutar
               </button>
             </div>
@@ -151,7 +151,7 @@
             </p>
           </div>
         </section>
-        <section id="redes_sociais" class="mt-4 py-2">
+        <section *ngIf="artista.links.length > 0" id="redes_sociais" class="mt-4 py-2">
           <div class="row justify-content-center">
             <h3 class="row text-bold w-auto">
               <div class="col-auto my-auto">
