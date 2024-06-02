@@ -34,7 +34,7 @@
   }
 </style>
 
-<div id="top" class="h-100 overflow-x-hidden overflow-y-auto">
+<div id="top" class="h-100 overflow-x-hidden overflow-y-auto" [ngClass]="theme == 'light' ? 'bg-white text-black' : 'bg-dark text-white'">
   <div class="w-100 h-auto overflow-hidden mt-5 pt-4" [ngStyle]="{'background-color':artista.color ?? 'transparent'}" [ngClass]="theme == 'light' ? 'text-dark' : 'text-white'">
     <div class="row justify-content-center p-0">
       <div class="col-11 p-0">
@@ -47,7 +47,8 @@
       <div class="col-xl-5 col-lg-5 col-md-6 col-sm-7">
         <div class="row justify-content-center">
           <div class="col-10">
-            <img [@fadeInAnimation] [src]="(artista.srcPerfil ? artista.srcPerfil.replace('artista_', 'buttons/').replace('png', 'svg') : artista.srcBtn.replace('artista_', 'buttons/').replace('png', 'svg'))" alt="Artista selecionado" class="img-fluid img-zoom">
+            <img *ngIf="artista.srcPerfil && loadedImage" [@fadeInAnimation] [src]="artista.srcPerfil" alt="Artista selecionado" class="img-fluid img-zoom">
+            <!-- <img *ngIf="!loadedImage" [src]="'/no_image_button_no_bg.svg'" alt="Artista selecionado" class="img-fluid img-zoom"> -->
           </div>
         </div>
       </div>
@@ -194,4 +195,5 @@
       </div>
     </div>
   </div>
+  <app-footer></app-footer>
 </div>

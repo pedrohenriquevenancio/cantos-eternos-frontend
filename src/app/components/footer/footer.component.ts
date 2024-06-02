@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ThemeModeService } from '../../utils/services/theme-mode.service';
 import { NgClass } from '@angular/common';
 
@@ -11,12 +11,15 @@ import { NgClass } from '@angular/common';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.sass'
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
   public theme : string = '';
 
-  constructor(private themeMode : ThemeModeService) {
+  constructor(private themeMode : ThemeModeService) {}
+
+  public ngOnInit() {
     this.themeMode.getThemeMode().subscribe((theme) => {
       this.theme = theme;
     });
   }
+
 }

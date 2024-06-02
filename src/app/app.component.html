@@ -16,13 +16,12 @@
   }
 </style>
 
-<div class="vh-100 w-100 overflow-x-hidden" [ngClass]="theme == 'light' ? 'bg-white' : 'bg-dark'">
+<div class="vh-100 w-100 overflow-x-hidden overflow-y-auto">
   <div style="min-height:auto;" class="position-fixed z-2 w-100">
     <app-header></app-header>
   </div>
   <div style="min-height:80%;" class="h-100">
     <router-outlet></router-outlet>
   </div>
-  <app-footer></app-footer>
 </div>
 

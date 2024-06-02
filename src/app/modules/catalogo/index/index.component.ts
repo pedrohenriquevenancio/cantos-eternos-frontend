@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { CatalogoComponent } from '../../../components/catalogo/catalogo.component';
 import { ThemeModeService } from '../../../utils/services/theme-mode.service';
+import { FooterComponent } from '../../../components/footer/footer.component';
 
 @Component({
   selector: 'app-index',
@@ -21,7 +22,8 @@ import { ThemeModeService } from '../../../utils/services/theme-mode.service';
     NgClass,
     NgIf,
     NgFor,
-    CatalogoComponent
+    CatalogoComponent,
+    FooterComponent,
   ],
   templateUrl: './index.component.html',
   styleUrl: './index.component.sass'
@@ -63,7 +65,7 @@ export class IndexComponent {
   }
 
   searchArtistas() {
-    console.log(this.value);
+    // console.log(this.value);
   }
 
   setGenders(gender: string) {

@@ -6,6 +6,7 @@ import { fadeInAnimation } from '../../../utils/animations/fadeIn.animation';
 import { ArtistasAPIService } from '../../../utils/api/artistas-api.service';
 import { ThemeModeService } from '../../../utils/services/theme-mode.service';
 import { imgCardEffect } from '../../../utils/animations/imgCardEffect.animation';
+import { FooterComponent } from '../../../components/footer/footer.component';
 
 @Component({
   selector: 'app-show',
@@ -15,7 +16,8 @@ import { imgCardEffect } from '../../../utils/animations/imgCardEffect.animation
     NgStyle,
     NgIf,
     NgFor,
-    MatIconModule
+    MatIconModule,
+    FooterComponent
   ],
   templateUrl: './show.component.html',
   styleUrl: './show.component.sass',
@@ -29,6 +31,7 @@ export class ShowComponent {
   artista : any = {};
   theme : string = 'dark';
   selectedImage ?: string;
+  loadedImage : boolean = false;
 
   constructor(private themeMode : ThemeModeService, private currentRoute : ActivatedRoute, private router : Router, private api : ArtistasAPIService, private elRef: ElementRef) {
     this.themeMode.getThemeMode().subscribe((theme) => {
@@ -42,7 +45,6 @@ export class ShowComponent {
     this.api.getArtistaById(this.id)
     .then((artista) => {
       this.artista = artista
-      console.log(this.artista);
     })
     .catch((err) => console.log(err));
 
