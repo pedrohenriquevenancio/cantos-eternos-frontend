@@ -55,6 +55,10 @@ export class ShowComponent {
     this.router.navigate(['/catalogo']);
   }
 
+  setLoadedImage() {
+    this.loadedImage = true;
+  }
+
   scrollTo(id:string) {
     const element = this.elRef.nativeElement.querySelector(`#${id}`);
     if (element) {

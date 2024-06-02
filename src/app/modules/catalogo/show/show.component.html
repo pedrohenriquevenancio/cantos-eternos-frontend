@@ -47,8 +47,7 @@
       <div class="col-xl-5 col-lg-5 col-md-6 col-sm-7">
         <div class="row justify-content-center">
           <div class="col-10">
-            <img *ngIf="artista.srcPerfil && loadedImage" [@fadeInAnimation] [src]="artista.srcPerfil" alt="Artista selecionado" class="img-fluid img-zoom">
-            <!-- <img *ngIf="!loadedImage" [src]="'/no_image_button_no_bg.svg'" alt="Artista selecionado" class="img-fluid img-zoom"> -->
+            <img [@fadeInAnimation] [src]="(artista.srcPerfil && loadedImage) ? artista.srcPerfil : './assets/no_image_button_no_bg.svg'" alt="Artista selecionado" class="img-fluid img-zoom" (load)="setLoadedImage()">
           </div>
         </div>
       </div>
