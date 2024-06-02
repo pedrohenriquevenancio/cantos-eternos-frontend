@@ -24,7 +24,7 @@ export class CatalogoComponent {
 
   constructor(private router : Router, private api : ArtistasAPIService) {
     this.api.getArtistas().then((artistas) => {
-      this.artistas = artistas;
+      this.artistas = artistas.filter((artista:any) => artista.sexo !== 'Teste');
     }).catch((err) => {
       console.log(err);
     });
