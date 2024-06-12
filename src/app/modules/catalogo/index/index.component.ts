@@ -29,7 +29,6 @@ import { FooterComponent } from '../../../components/footer/footer.component';
   styleUrl: './index.component.sass'
 })
 export class IndexComponent {
-  public value: string = '';
   public theme: string = 'dark';
   public music_genders: string[] = [
     'Rock',
@@ -65,7 +64,7 @@ export class IndexComponent {
   }
 
   searchArtistas() {
-    // console.log(this.value);
+
   }
 
   setGenders(gender: string) {

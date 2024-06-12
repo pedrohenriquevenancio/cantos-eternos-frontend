@@ -23,33 +23,9 @@
     background-color: #f1f1f11d;
   }
 </style>
-<div class="w-100 h-auto pt-2 pb-5" [ngClass]="theme == 'light' ? 'bg-white text-black' : 'bg-dark text-white'">
+<div class="w-100 min-vh-100 pt-2 pb-5" [ngClass]="theme == 'light' ? 'bg-white text-black' : 'bg-dark text-white'">
   <div class="row justify-content-center align-items-baseline mt-5 h-100 p-3">
     <div class="col-11 py-2 h-100">
-      <nav class="row mb-4">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10">
-          <mat-form-field class="w-100 rounded-pill mb-0">
-            <mat-label><b><mat-icon>search</mat-icon></b> Pesquisar</mat-label>
-            <input matInput type="text" [(ngModel)]="value" (change)="searchArtistas()">
-            @if (value && value.length > 0) {
-              <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                <mat-icon>close</mat-icon>
-              </button>
-            }
-          </mat-form-field>
-        </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-2">
-          <div class="row justify-content-center">
-            <div class="col-11">
-              <div class="row justify-content-end align-items-center h-100 mt-2">
-                <button data-bs-toggle="offcanvas" data-bs-target="#filtros" aria-controls="filtros" mat-mini-fab color="basic" class="mr-2" aria-label="Botão de filtragem">
-                  <mat-icon>filter_list</mat-icon>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
       <main>
         <app-catalogo></app-catalogo>
       </main>

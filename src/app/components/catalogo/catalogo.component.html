@@ -1,3 +1,27 @@
+<nav class="row mb-4">
+  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10">
+    <mat-form-field class="w-100 rounded-pill mb-0">
+      <mat-label><b><mat-icon>search</mat-icon></b> Pesquisar</mat-label>
+      <input matInput type="text" [(ngModel)]="value" (keyup)="searchArtistas()">
+      @if (value && value.length > 0) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+  </div>
+  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-2">
+    <div class="row justify-content-center">
+      <div class="col-11">
+        <div class="row justify-content-end align-items-center h-100 mt-2">
+          <button data-bs-toggle="offcanvas" data-bs-target="#filtros" aria-controls="filtros" mat-mini-fab color="basic" class="mr-2" aria-label="Botão de filtragem">
+            <mat-icon>filter_list</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 @if (artistas.length > 0) {
   <div class="row justify-content-around py-3">
     <button (click)="show(artista._id)" class="col-xl-3 col-lg-3 col-md-4 col-sm-6 btn border-0 bg-transparent text-white" *ngFor="let artista of artistas; let i = index">
@@ -6,6 +30,7 @@
   </div>
 } @else {
   <div class="row justify-content-center align-items-center w-100 min-vh-100 py-3">
+    <h3 class="text-center">Não foi encontrado nada por aqui...</h3>
     <div class="spinner-border text-light" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
