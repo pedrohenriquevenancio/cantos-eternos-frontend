@@ -34,7 +34,7 @@
   }
 </style>
 
-<div id="top" class="h-100" [ngClass]="theme == 'light' ? 'bg-white text-black' : 'bg-dark text-white'">
+<div id="top" class="min-vh-100" [ngClass]="theme == 'light' ? 'bg-white text-black' : 'bg-dark text-white'">
   <div class="w-100 h-auto mt-5 pt-4" [ngStyle]="{'background-color':artista.color ?? 'transparent'}" [ngClass]="theme == 'light' ? 'text-dark' : 'text-white'">
     <div class="row justify-content-center p-0">
       <div class="col-11 p-0">
@@ -53,7 +53,7 @@
       </div>
     </div>
   </div>
-  <div class="w-100 h-auto pb-3 mb-5">
+  <div class="w-100 h-auto pb-4">
     <div class="row mt-4 mb-3">
       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
         <div class="row justify-content-center">
