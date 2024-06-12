@@ -1,27 +1,26 @@
 <style>
   ::-webkit-scrollbar {
-    width: 0px;
+    width: 10px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: transparent;
+    background-color: cadetblue;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: transparent;
+    background-color: rgb(60, 111, 112);
   }
 
   ::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: gray;
   }
 </style>
 
-<div class="vh-100 w-100 overflow-x-hidden overflow-y-auto">
+<div class="vh-100 w-100 overflow-y-auto overflow-x-hidden">
   <div style="min-height:auto;" class="position-fixed z-2 w-100">
     <app-header></app-header>
   </div>
-  <div style="min-height:80%;" class="h-100">
-    <router-outlet></router-outlet>
-  </div>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>
 
