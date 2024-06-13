@@ -22,7 +22,7 @@
     </div>
   </div>
 </nav>
-@if (artistas.length > 0) {
+@if (!loading) {
   <div class="row justify-content-around py-3">
     <button (click)="show(artista._id)" class="col-xl-3 col-lg-3 col-md-4 col-sm-6 btn border-0 bg-transparent text-white" *ngFor="let artista of artistas; let i = index">
       <img [@imgCardEffect] [src]="imagesLoaded.includes(i) ? artista.srcBtn.replace('artista_', 'buttons/').replace('png', 'svg') : '/assets/no_image_button.svg'" [alt]="artista.nome" class="img-fluid button-img" loading="eager" (load)="imagesLoaded.push(i)">
@@ -30,8 +30,7 @@
   </div>
 } @else {
   <div class="row justify-content-center align-items-center w-100 min-vh-100 py-3">
-    <h3 class="text-center">Não foi encontrado nada por aqui...</h3>
-    <div class="spinner-border text-light" role="status">
+    <div class="spinner-border text-light" style="width: 6rem; height: 6rem;" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>

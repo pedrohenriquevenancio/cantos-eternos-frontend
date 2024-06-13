@@ -34,11 +34,13 @@ export class CatalogoComponent {
   public oldArtistas : any[] = [];
   public artistas : any[] = [];
   public imagesLoaded : number[] = [];
+  public loading : boolean = true;
 
   constructor(private router : Router, private api : ArtistasAPIService) {
     this.api.getArtistas().then((artistas) => {
       this.artistas = artistas.filter((artista:any) => artista.sexo !== 'Teste');
       this.oldArtistas = this.artistas;
+      this.loading = false;
     }).catch((err) => {
       console.log(err);
     });

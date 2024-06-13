@@ -32,6 +32,7 @@ export class ShowComponent {
   theme : string = 'dark';
   selectedImage ?: string;
   loadedImage : boolean = false;
+  loading : boolean = true;
 
   constructor(private themeMode : ThemeModeService, private currentRoute : ActivatedRoute, private router : Router, private api : ArtistasAPIService, private elRef: ElementRef) {
     this.themeMode.getThemeMode().subscribe((theme) => {
@@ -44,7 +45,8 @@ export class ShowComponent {
 
     this.api.getArtistaById(this.id)
     .then((artista) => {
-      this.artista = artista
+      this.artista = artista;
+      this.loading = false;
     })
     .catch((err) => console.log(err));
 
