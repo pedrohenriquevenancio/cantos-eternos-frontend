@@ -33,8 +33,7 @@
     background-color: transparent;
   }
 </style>
-
-<div id="top" class="min-vh-100" [ngClass]="theme == 'light' ? 'bg-white text-black' : 'bg-dark text-white'">
+<div class="min-vh-100" [ngClass]="theme == 'light' ? 'bg-white text-black' : 'bg-dark text-white'">
   <div class="w-100 h-auto mt-5 pt-4" [ngStyle]="{'background-color':artista.color ?? '#fff'}" [ngClass]="theme == 'light' ? 'text-dark' : 'text-white'">
     <div class="row justify-content-center p-0">
       <div class="col-11 p-0">

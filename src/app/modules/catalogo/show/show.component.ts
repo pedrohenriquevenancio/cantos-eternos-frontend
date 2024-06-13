@@ -1,5 +1,5 @@
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
 import { fadeInAnimation } from '../../../utils/animations/fadeIn.animation';
@@ -7,6 +7,7 @@ import { ArtistasAPIService } from '../../../utils/api/artistas-api.service';
 import { ThemeModeService } from '../../../utils/services/theme-mode.service';
 import { imgCardEffect } from '../../../utils/animations/imgCardEffect.animation';
 import { FooterComponent } from '../../../components/footer/footer.component';
+import { ScrollService } from '../../../scroll.service';
 
 @Component({
   selector: 'app-show',
@@ -24,7 +25,8 @@ import { FooterComponent } from '../../../components/footer/footer.component';
   animations: [
     fadeInAnimation,
     imgCardEffect
-  ]
+  ],
+  providers: [ScrollService]
 })
 export class ShowComponent {
   id : string|number = '';
@@ -49,8 +51,6 @@ export class ShowComponent {
       this.loading = false;
     })
     .catch((err) => console.log(err));
-
-    this.scrollTo('top');
   }
 
   navigateBack() {
