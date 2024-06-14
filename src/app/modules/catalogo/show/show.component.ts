@@ -1,13 +1,13 @@
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
-import { fadeInAnimation } from '../../../utils/animations/fadeIn.animation';
-import { ArtistasAPIService } from '../../../utils/api/artistas-api.service';
-import { ThemeModeService } from '../../../utils/services/theme-mode.service';
-import { imgCardEffect } from '../../../utils/animations/imgCardEffect.animation';
 import { FooterComponent } from '../../../components/footer/footer.component';
-import { ScrollService } from '../../../scroll.service';
+import { fadeInAnimation } from '../../../utils/animations/fadeIn.animation';
+import { imgCardEffect } from '../../../utils/animations/imgCardEffect.animation';
+import { ArtistasAPIService } from '../../../utils/api/artistas-api.service';
+import { ScrollService } from '../../../utils/services/scroll.service';
+import { ThemeModeService } from '../../../utils/services/theme-mode.service';
 
 @Component({
   selector: 'app-show',

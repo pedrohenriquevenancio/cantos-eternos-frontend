@@ -8,6 +8,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { CatalogoComponent } from '../../../components/catalogo/catalogo.component';
 import { ThemeModeService } from '../../../utils/services/theme-mode.service';
 import { FooterComponent } from '../../../components/footer/footer.component';
+import { GenerosMusicaisAPIService } from '../../../utils/api/generos-musicais-api.service';
+import { GeneroMusical } from '../../../utils/types/GeneroMusical';
 
 @Component({
   selector: 'app-index',
@@ -30,36 +32,16 @@ import { FooterComponent } from '../../../components/footer/footer.component';
 })
 export class IndexComponent {
   public theme: string = 'dark';
-  public music_genders: string[] = [
-    'Rock',
-    'Pop',
-    'Rap',
-    'Reggaeton',
-    'Electronica',
-    'Metal',
-    'Indie',
-    'Jazz',
-    'Clasica',
-    'Blues',
-    'Salsa',
-    'Sertanejo',
-    'Reggae',
-    'Punk',
-    'Country',
-    'Disco',
-    'Hip Hop',
-    'Folk',
-    'Techno',
-    'House',
-    'Dubstep',
-    'Trap',
-  ];
-
+  public genders: GeneroMusical[] = [];
+  public singer_gender: string = '';
   public selected_music_genders: string[] = [];
 
-  constructor(private themeMode : ThemeModeService) {
+  constructor(private themeMode : ThemeModeService, private api: GenerosMusicaisAPIService) {
     this.themeMode.getThemeMode().subscribe((theme) => {
       this.theme = theme;
+    });
+    this.api.getGenerosMusicais().then((gender) => {
+      this.genders = gender;
     });
   }
 

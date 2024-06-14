@@ -5,7 +5,7 @@ import { ThemeModeService } from './utils/services/theme-mode.service';
 import { NgClass } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
 import { ArtistasAPIService } from './utils/api/artistas-api.service';
-import { ScrollService } from './scroll.service';
+import { ScrollService } from './utils/services/scroll.service';
 
 @Component({
   selector: 'app-root',

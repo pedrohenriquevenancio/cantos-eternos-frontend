@@ -1,5 +1,5 @@
-<nav class="row mb-4">
-  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10">
+<nav class="row justify-content-center align-content-center mb-4">
+  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-10">
     <mat-form-field class="w-100 rounded-pill mb-0">
       <mat-label><b><mat-icon>search</mat-icon></b> Pesquisar</mat-label>
       <input matInput type="text" [(ngModel)]="value" (keyup)="searchArtistas()">
@@ -10,7 +10,7 @@
       }
     </mat-form-field>
   </div>
-  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-2">
+  <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-2">
     <div class="row justify-content-center">
       <div class="col-11">
         <div class="row justify-content-end align-items-center h-100 mt-2">
@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </nav>
 @if (!loading) {
   <div class="row justify-content-around py-3">
