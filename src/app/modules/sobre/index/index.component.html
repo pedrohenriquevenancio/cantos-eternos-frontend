@@ -1,44 +1,147 @@
 <style>
   .bg-music {
-    background-image: url('./assets/background_inicio.jpg');
+    background-image: url('./assets/background_sobre.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.559));
   }
+  .h-1 {
+    height: 0.7px;
+  }
+  .h-10 {
+    height: 10px;
+  }
+  .min-h-200 {
+    min-height: 200px;
+  }
+  .min-h-300 {
+    min-height: 300px;
+  }
+  .font-family-1 {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .font-subtitle {
+    font-size: 32px;
+  }
+  .font-title {
+    font-size: 38px;
+  }
+  .div_hidden {
+    display: flex;
+  }
+
+  @media (max-width: 767px) {
+    .font-subtitle {
+      font-size: 20px;
+    }
+    .font-title {
+      font-size: 22px;
+    }
+    .div_hidden {
+      display: none;
+    }
+  }
+
+  @media (min-width: 767px) and (max-width: 1024px) {
+    .font-subtitle {
+      font-size: 20px;
+    }
+    .font-title {
+      font-size: 22px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .font-subtitle {
+      font-size: 24px;
+    }
+    .font-title {
+      font-size: 26px;
+    }
+  }
 </style>
 
-<div class="w-100 min-vh-100 py-4" [ngClass]="theme == 'light' ? 'bg-white text-black' : 'bg-black text-white'">
-  <div class="row justify-content-center align-items-baseline my-5 h-100 p-3">
-    <div class="col-11 py-2 h-100">
-      <main class="h-100 py-3 px-3">
-        <div class="w-100 rounded-pill" [ngClass]="theme == 'dark' ? 'bg-white text-black' : 'bg-black text-white'">
-          <h2 class="m-0 px-3 py-1">Sobre nós</h2>
-        </div>
-        <h4 class="text-center text-wrap rounded">
-          <br>
-          Bem-vindo ao <b>Cantos Eternos</b>, um lurgar onde as vozes imortais encontram seu lar.
-          <br><br>
-          Em um mundo onde as memórias podem desvanecer e as melodias se dissipam no tempo, o Cantos Eternos surge como uma oásis de reverência e celebração. Aqui, mergulhamos nas profundezas da história da música, honrando os grandes cantores que, embora tenham partido, continuam a ecoar em nossos corações e mentes.
-          <br><br>
-          Somos apaixonados por preservar o legado dos talentosos artistas que moldaram a paisagem musical, transformando suas vidas e obras em testemunhos eternos da beleza e da emoção humana. De Chico Buarte a Rita Lee, de Michael Jackson a Whitney Houston, cada voz imortalizada aqui conta uma história única de paixão, talento e inspiração.
-          <br><br>
-          Nossa missão é mais do que apenas relembrar o passado; é também inspirar as gerações futuras, proporcionando um espaço onde o conhecimento, a admiração e a conexão fluem livremente. Com uma combinação cuidadosa de biografias detalhadas, vídeos emocionantes e uma seleção de grandes sucessos, convidamos você a se perder na música e na memória.
-          <br>
-          <br>
-          <b>
-          Junte-se a nós nesta jornada de descoberta e homenagem. Explore, aprenda e deixe-se envolver pela magia intemporal dos Cantos Eternos.
-          </b>
-          <br><br>
-          <b>Cantos Eternos - Preserve a Memória, Celebre a Música.</b>
-        </h4>
-        <!-- <div class="row justify-content-center">
-          <div class="col-4">
-            <img *ngIf="theme == 'dark'" src="./assets/logos/light_logo.png" alt="Logo" class="img-fluid rounded-circle" loading="eager">
-            <img *ngIf="theme == 'light'" src="./assets/logos/dark_logo.png" alt="Logo" class="img-fluid rounded-circle" loading="eager">
-          </div>
-        </div> -->
-      </main>
+<div class="w-100 min-vh-100 py-4" [ngClass]="theme == 'light' ? 'bg-white' : 'bg-dark'">
+  <section class="row justify-content-center align-items-center h-auto mt-4 bg-white">
+    <div class="col-6">
+      <img src="./assets/background_sobre.svg" alt="background" class="img-fluid">
     </div>
-  </div>
+  </section>
+  <section class="row justify-content-center align-items-center min-h-200 pb-3 bg-white">
+    <div class="col-8 mt-4">
+      <h1 [@fadeInAnimation] class="text-center font-family-1 mt-4">Em um mundo onde as memórias podem desvanecer e as melodias se dissipam com o tempo, o Cantos Eternos surge como um oásis de reverência e celebração.</h1>
+    </div>
+  </section>
+  <section class="row">
+    <div class="col-lg-6 col-md-6">
+      <div class="row justify-content-center align-content-center h-100">
+        <div class="col-10 h-100">
+          <div class="row justify-content-center align-content-center h-100">
+            <h2 class="font-subtitle text-center font-family-1 py-3" [ngClass]="theme == 'dark' ? 'text-white' : 'text-black'">
+              Somos apaixonados por preservar o legado dos talentosos artistas que moldaram a paisagem musical, transformando suas vidas e obras em testemunhos eternos da beleza e emoção humanas.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 p-0 m-0">
+      <img src="./assets/sobre_img_1.jpg" alt="Imagem de um microfone" class="img-fluid">
+    </div>
+  </section>
+  <section class="row reverse">
+    <div class="col-lg-6 col-md-6 p-0 m-0">
+      <img src="./assets/sobre_img_2.jpg" alt="Imagem de um microfone" class="img-fluid div_hidden">
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <div class="row justify-content-center align-content-center h-100">
+        <div class="col-10 h-100">
+          <div class="row justify-content-center align-content-center h-100">
+            <h2 class="font-subtitle text-center font-family-1 py-3" [ngClass]="theme == 'dark' ? 'text-white' : 'text-black'">
+              De Chico Buarque a Rita Lee, de Michael Jackson a Whitney Houston, cada voz imortalizada aqui conta uma história única de paixão, talento e inspiração.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="col-12 mb-3 h-1" [ngClass]="theme == 'dark' ? 'bg-white' : 'bg-black'"></div>
+  <section class="row justify-content-center align-items-center min-h-200" [ngClass]="theme == 'light' ? 'bg-white' : 'bg-dark'">
+    <div [@fadeInAnimation] class="col-10 text-center" [ngClass]="theme == 'dark' ? 'text-white' : 'text-black'">
+      <h3 class="font-family-1">
+        Nossa missão vai além de apenas relembrar o passado; buscamos também inspirar as gerações futuras, proporcionando um espaço onde conhecimento, admiração e conexão fluem livremente.
+      </h3>
+      <br>
+      <h3 class="font-family-1">
+        Com uma combinação cuidadosa de biografias detalhadas, vídeos emocionantes e uma seleção de grandes sucessos, convidamos você a se perder na música e na memória.
+      </h3>
+    </div>
+  </section>
+  <div class="col-12 my-3 h-10" [ngClass]="theme == 'dark' ? 'bg-white' : 'bg-black'"></div>
+  <section class="row">
+    <div class="col-lg-6 col-md-6">
+      <div class="row justify-content-center align-content-center h-100">
+        <div class="col-10 h-100">
+          <div class="row justify-content-center align-content-center h-100">
+            <h2 class="font-subtitle text-center font-family-1 py-3" [ngClass]="theme == 'dark' ? 'text-white' : 'text-black'">
+              Junte-se a nós nesta jornada de descoberta e homenagem. Explore, aprenda e deixe-se envolver pela magia intemporal dos Cantos Eternos.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 p-0 m-0">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-lg-6 col-md-8 col-sm-10 h-100">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-10">
+              <img *ngIf="theme == 'dark'" src="./assets/logos/light_logo.png" alt="Logo" class="img-fluid rounded-circle" loading="eager">
+              <img *ngIf="theme == 'light'" src="./assets/logos/dark_logo.png" alt="Logo" class="img-fluid rounded-circle" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
